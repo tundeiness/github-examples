@@ -1,0 +1,13 @@
+name: Manual triggers with Params
+
+on:
+  workflow_dispatch:
+    inputs:
+      greetings:
+        description: 'Salutation'
+        required: true
+        type: string
+      data:
+        description: 'Base64 encoded'
+        required: true
+        type: string
