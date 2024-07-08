@@ -1,7 +1,18 @@
 name: Manual triggers with Params
 
 on:
-  jobs:
+  workflow_dispatch:
+    inputs:
+      greetings:
+        description: 'Salutation'
+        required: true
+        type: string
+      data:
+        description: 'Base64 encoded'
+        required: true
+        type: string
+
+jobs:
     greet:
       runs-on: ubuntu-latest
       steps:
@@ -14,13 +25,3 @@ on:
         - name: Display file content
           run |
             echo "Content of the file:" cat ./decoded_file.txt
-  workflow_dispatch:
-    inputs:
-      greetings:
-        description: 'Salutation'
-        required: true
-        type: string
-      data:
-        description: 'Base64 encoded'
-        required: true
-        type: string
