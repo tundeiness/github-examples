@@ -5,13 +5,12 @@ on:
     branches:
       - main
 
-
 jobs:
   expression-functions:
       runs-on: ubuntu-latest
       steps:
         - name: Check if a string contains a substring
-          if: contains("Terminnator", "nn" )
+          if: contains('Terminnator','in')
           run: echo "Yes! It contains such substring"
         - name: The job was a success
           if: ${{ success() }}
