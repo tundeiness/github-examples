@@ -1,0 +1,17 @@
+name: example-workflow
+on: [push]
+jobs:
+  hello-world:
+  # if this repo equals 'oct-org/oct-repo-prod run "hello world"
+      if: github.repository == 'oct-org/oct-repo-prod'
+      runs-on: ubuntu-latest
+      steps:
+        - name: "hello world"
+          run: echo "Hello Uranus"
+  # else run "hello-other-worlds"
+  hello-other-worlds:
+      runs-on: ubuntu-latest
+      steps:
+        - name: "hello Jupiter"
+          run: echo "Hello Andromeda galaxy"
+        
