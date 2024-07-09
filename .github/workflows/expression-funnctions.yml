@@ -1,0 +1,21 @@
+name: Expression Functions Demo
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  expression-functions:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check if a string contains a substring
+          if: contains("Terminnator", "nn" )
+          run: echo "Yes! It contains such substring"
+        - name: The job was a success
+          if: ${{ success() }}
+          run: echo "Yes! It was a success"
+        - name: Join Issue label
+          if: github.event_name == 'issues'
+          run: echo "Issue Labels:"
