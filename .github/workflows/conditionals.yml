@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello-world:
   # if this repo equals 'oct-org/oct-repo-prod run "hello world"
-      if: github.repository == 'oct-org/oct-repo-prod'
+      if: github.repository == 'tundeiness/github-examples'
       runs-on: ubuntu-latest
       steps:
         - name: "hello world"
