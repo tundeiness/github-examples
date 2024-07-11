@@ -1,0 +1,33 @@
+name: MacOS workflow example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: install dependencies
+        run: choco install dotnetcore-sdk
+        shell: powershell
+
+      - name: compile and run C# program
+        run: |
+          Add-Content -Path "Hello.cs" -Value @"
+          using System;
+          Public class Hello
+          {
+              public static void Main()
+              {
+                  Console.Writeline("Hello Windows from github action written with c#");
+              }
+          }
+          "@
+          dotnet new console  --force --no-restore
+          Move-Item -Path "hello.cs" -Destination "Program.cs" -force
+          dotnet run
+        shell: powershell
+      
