@@ -1,4 +1,4 @@
-name: MacOS workflow example
+name: Windows workflow example
 
 on:
   push:
