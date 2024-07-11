@@ -16,7 +16,7 @@ jobs:
 
       - name: compile and run C# program
         run: |
-          Add-Content -Path "Hello.cs" -Value @"
+          Add-Content -Path "Hello. cs" -value @"
           using System;
           Public class Hello
           {
