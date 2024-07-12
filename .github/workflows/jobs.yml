@@ -1,0 +1,16 @@
+name: Dependent Jobs example
+on: push
+jobs:
+  job1:
+    runs-on: ubunntu-latest
+    steps:
+      - name: stepA
+        run: echo "Hello ate the top"
+  job2:
+    runs-on: ubunntu-latest
+    needs: job1
+    steps:
+      - name: stepB
+        run: echo "Hello at the bottom"
+    
+  
