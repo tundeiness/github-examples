@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "My context"
-        run: echo "$MY_NAME is running context"
         env:
-          MY_NAME: ${{ github.user }}
+            MY_NAME: ${{ github.user }}
+        run: echo "$MY_NAME is running context"
+        
         
