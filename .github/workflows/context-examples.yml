@@ -1,0 +1,15 @@
+name: context examples
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  context-runs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "My context"
+        run: echo "$MY_NAME is running context"
+        env:
+          MY_NAME: ${{ github.user }}
+        
