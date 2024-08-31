@@ -1,0 +1,22 @@
+name: example of deploying
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    #runners
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: action/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build website
+        run: npm run build
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@v1.1
+        with:
+          site_id: your_netlify_site_id
+          api_key: your_netlify_api_key
+          args: deploy --prod
