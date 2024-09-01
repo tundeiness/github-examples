@@ -1,0 +1,19 @@
+# on:
+#   push:
+#     branches: [ main ]
+  
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#     - name: ARM Action
+#       # You may pin to the exact commit or the version.
+#       # uses: apoorv33/azure-arm@530cd444c556449669204b43102e8a9f9277025a
+#       uses: apoorv33/azure-arm@V6
+#       with:
+#         # Copy this script and modify with your Resource Group, Location and Template Location az group create --location $REPLACE_THIS_WITH_LOCATION --name $REPLACE_THIS_WITH_RESOURCE_GROUP az group deployment create --resource-group $REPLACE_THIS_WITH_RESOURCE_GROUP --template-file $REPLACE_THIS_WITH_TEMPLATE_FILE
+#         inlineScript: 
+#         # Azure CLI version to be used to execute the script. If not provided, latest version is used
+#         azcliversion: # optional, default is latest
+            
