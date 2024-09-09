@@ -7,3 +7,5 @@
 
 [![MacOS Build Status](https://github.com/tundeiness/github-examples/actions/workflows/runner-macos.yml/badge.svg)](https://github.com/tundeiness/github-examples/actions/workflows/runner-macos.yml)
 
+
+[![artifact](https://github.com/tundeiness/github-examples/actions/workflows/create-artifact.yml/badge.svg)](https://github.com/tundeiness/github-examples/actions/workflows/create-artifact.yml)
